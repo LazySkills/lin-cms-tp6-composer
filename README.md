@@ -1,2 +1,3 @@
 # lin-cms-tp6-composer
-lin cms tp6 composer package
+
+lin-cms-tp6 composer package
