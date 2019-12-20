@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LinCmsTp6": "src"
+            "LinCmsTp6\\": "src"
         }
     },
     "extra": {
