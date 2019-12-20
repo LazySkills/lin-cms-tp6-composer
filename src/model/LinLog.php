@@ -29,14 +29,14 @@ class LinLog extends BaseModel
             $filter['time'] = [$params['start'], $params['end']];
         }
 
-        $log = self::withSearch(['user_name', 'time'], $filter)->order('time desc');
-        $totalNums = $log->count();
-        $log = $log->pageX();
+        $log = static::withSearch(['user_name', 'time'], $filter)->order('time desc');
 
-        $list = $log->select();
+        $total = $log->count();
+        $list = static::pageX($log)->select();
+
         if (!$list) throw new LinLogException();
 
-        return $log->pageDate($list,$totalNums);
+        return static::pageData($log,$list->toArray(),$total);
     }
 
     public function searchUserNameAttr(Query $query, $value, $data)

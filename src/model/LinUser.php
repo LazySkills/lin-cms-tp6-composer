@@ -22,19 +22,25 @@ class LinUser extends BaseModel
 
     public static function getAdminUsers(array $params = [])
     {
-        $group = [];
-        if (array_key_exists('group_id', $params)) $group = ['group_id' => $params['group_id']];
-        $userList = self::where('admin', '<>', 2)->where($group);
+        $where = [];
 
-        $totalNums = $userList->count();
-        $userList = $userList->pageX();
+        if (array_key_exists('group_id', $params)) $where['group_id']=$params['group_id'];
+
+        $model = LinUser::where('admin','<>',2)->where($where);
+
+        $total = $model->count();
+        $list = static::pageX($model)->select();
+
+        if (empty($list)){
+            throw new LinUserException();
+        }
 
         $list = array_map(function ($item) {
             $item['group_name'] = LinGroup::where('id','=',$item['group_id'])->value('name') ?? '暂无';
             return $item;
-        }, $userList->select()->toArray());
+        }, $list->toArray());
 
-        return $userList->pageData($list,$totalNums);
+        return static::pageData($model,$list,$total);
     }
 
     /** 验证用户信息 */
