@@ -65,10 +65,7 @@ class FileUploader
         if(empty($rule)) return;
         try {
             validate([
-                $this->key=>[
-                    'fileSize'=>1024*1024*2,
-                    'fileExt'=>['jpg','jpeg','png'],
-                ]
+                $this->key=>$rule
             ])->check([$this->key=>$this->file]);
         } catch (ValidateException $e) {
             throw new LinFileException($e->getMessage());
