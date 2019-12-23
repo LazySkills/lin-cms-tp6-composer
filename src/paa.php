@@ -7,11 +7,11 @@ return [
         'member' => [
             'admin' => [
                 'password' => 'supper',
-                'supper' => true, # true：超级管理员｜false：浏览者
+                'admin' => true, # true：超级管理员｜false：浏览者
             ],
             'web' => [
                 'password' => '123456',
-                'supper' => false, # true：超级管理员｜false：浏览者
+                'admin' => false, # true：超级管理员｜false：浏览者
             ]
         ],
     ]
