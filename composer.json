@@ -31,7 +31,7 @@
     },
     "scripts": {
         "pre-autoload-dump": [
-            "cp -R src/database database"
+            "cp -R vendor/lazyskills/lin-cms-tp6/src/database database"
         ]
     }
 }
