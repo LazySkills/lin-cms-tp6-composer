@@ -22,6 +22,9 @@
     },
     "extra": {
         "think": {
+            "services": [
+                "think\\annotation\\Service"
+            ],
             "config": {
                 "annotation": "src/config.php",
                 "lincms": "src/lincms.php",
