@@ -45,5 +45,10 @@
                 }
             }
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "cp -R src/database database"
+        ]
     }
 }
