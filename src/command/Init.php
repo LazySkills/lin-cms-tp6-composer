@@ -25,7 +25,7 @@ class Init extends Command
     protected function execute(Input $input, Output $output)
     {
         $this->output = $output;
-        $this->xCopy("../database/",root_path().'/database/',1);
+        $this->xCopy(__DIR__."/../database/",root_path().'/database/',1);
         $output->writeln('<info>' . $this->type . ': created successfully.</info>');
     }
 
