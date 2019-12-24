@@ -30,7 +30,7 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": [
+        "pre-autoload-dump": [
             "cp -R src/database database"
         ]
     }
