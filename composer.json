@@ -28,10 +28,5 @@
                 "paa": "src/paa.php"
             }
         }
-    },
-    "scripts": {
-        "migrate:create": [
-            "cp -R vendor/lazyskills/lin-cms-tp6/src/database database"
-        ]
     }
 }
