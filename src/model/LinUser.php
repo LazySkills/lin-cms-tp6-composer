@@ -75,11 +75,7 @@ class LinUser extends BaseModel
                 ->field('email')
                 ->find();
 
-            if ($exists) throw  new LinUserException([
-                'code' => 400,
-                'msg' => '注册邮箱重复，请重新输入',
-                'error_code' => 10030
-            ]);
+            if ($exists) throw  new LinUserException('注册邮箱重复，请重新输入');
         }
         $user->save($params);
     }
