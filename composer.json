@@ -12,8 +12,8 @@
     "require": {
         "php": ">=7.1.0",
         "topthink/think-migration": "^3.0",
-        "lazyskills/think-annotation": "dev-master",
-        "lazyskills/paa-thinkphp6": "dev-master"
+        "lazyskills/think-annotation": "dev-dev",
+        "lazyskills/paa-thinkphp6": "dev-dev"
     },
     "autoload": {
         "psr-4": {
