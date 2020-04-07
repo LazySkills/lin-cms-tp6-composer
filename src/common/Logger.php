@@ -5,7 +5,7 @@ namespace LinCmsTp6\common;
 
 
 use LinCmsTp6\model\LinLog;
-use paa\annotation\common\authorize\Jwt;
+use paa\common\authorize\Jwt;
 use think\facade\Log;
 
 class Logger
