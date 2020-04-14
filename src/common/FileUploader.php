@@ -24,9 +24,9 @@ class FileUploader
     protected $key;
     protected $data = [];
 
-    public function __construct(array $files)
+    public function __construct($files)
     {
-        if (empty($files)){
+        if (empty($files) or !is_array($files)){
             throw new LinFileException("未找到符合条件的文件资源");
         }
         if (count($files) >= config('lincms.file.nums')){
