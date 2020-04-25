@@ -99,7 +99,7 @@ class FileUploader
         try{
             $linFile = LinFile::create([
                 'name' => basename($path),
-                'path' => $path,
+                'path' => str_replace('\\', '/', $path),
                 'size' => $this->file->getSize(),
                 'extension' => $this->file->getOriginalExtension(),
                 'md5' => $this->file->md5(),
@@ -114,7 +114,7 @@ class FileUploader
     protected function getPublicData($id,$path){
         return [
             'id' => $id,
-            'path' => $path,
+            'path' => str_replace('\\', '/', $path),
             'url' => request()->scheme().'://'.request()->host(). '/' . config('lincms.file.store_dir') . '/' . $path
         ];
     }
