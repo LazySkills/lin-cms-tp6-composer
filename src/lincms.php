@@ -31,8 +31,6 @@ return [
         ],
     ],
     'file' => [
-        'image_type' => ['jpg','jpeg','png','gif'],
-        'video_type' => ['mp4'],
         'validate' => [
             'image' => [
                 'file',

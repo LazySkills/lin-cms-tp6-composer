@@ -54,10 +54,10 @@ class FileUploader
 
     protected function verify()
     {
-        $type = $this->file->getOriginalExtension();
-        if (in_array($type,config('lincms.file.image_type'))){
+        $type = strtolower($this->file->getOriginalExtension());
+        if (in_array($type,config('lincms.file.validate.image.fileExt'))){
             $rule = config('lincms.file.validate.image');
-        }elseif (in_array($type,config('lincms.file.video_type'))){
+        }elseif (in_array($type,config('lincms.file.validate.video.fileExt'))){
             $rule = config('lincms.file.validate.video');
         }else{
             throw new LinFileException('暂不支持的文件类型：'.$type);
