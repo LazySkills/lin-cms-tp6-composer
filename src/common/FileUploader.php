@@ -96,10 +96,11 @@ class FileUploader
 
     protected function storeDb(string $path)
     {
+        $path = str_replace('\\', '/',strtolower($path));
         try{
             $linFile = LinFile::create([
                 'name' => basename($path),
-                'path' => str_replace('\\', '/', $path),
+                'path' => $path,
                 'size' => $this->file->getSize(),
                 'extension' => $this->file->getOriginalExtension(),
                 'md5' => $this->file->md5(),
@@ -112,9 +113,10 @@ class FileUploader
     }
 
     protected function getPublicData($id,$path){
+        $path = str_replace('\\', '/',strtolower($path));
         return [
             'id' => $id,
-            'path' => str_replace('\\', '/', $path),
+            'path' => $path,
             'url' => request()->scheme().'://'.request()->host(). '/' . config('lincms.file.store_dir') . '/' . $path
         ];
     }
