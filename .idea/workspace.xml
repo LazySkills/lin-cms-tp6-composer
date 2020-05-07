@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9c1f9d-5a8e-4c8d-8bbb-5edb1d2758e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/FileUploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/FileUploader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lincms.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/lincms.php" afterDir="false" />
     </list>
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/FileUploader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+            <state relative-caret-position="208">
+              <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -50,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lincms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="18" />
+            <state relative-caret-position="198">
+              <caret line="34" column="19" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -196,12 +195,12 @@
       <workItem from="1586357914245" duration="1265000" />
       <workItem from="1586877161334" duration="176000" />
       <workItem from="1588155330643" duration="23000" />
-      <workItem from="1588842734821" duration="281000" />
+      <workItem from="1588842734821" duration="887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1442000" />
+    <option name="totallyTimeSpent" value="2048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1308" y="23" width="1252" height="1329" extended-state="0" />
@@ -261,15 +260,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lincms.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="198">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/FileUploader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state relative-caret-position="208">
+          <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
         </state>
       </provider>
     </entry>

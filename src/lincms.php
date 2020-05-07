@@ -31,16 +31,16 @@ return [
         ],
     ],
     'file' => [
+        'image_type' => ['jpg','jpeg','png','gif'],
+        'video_type' => ['mp4'],
         'validate' => [
             'image' => [
                 'file',
                 'fileSize'=>1024*1024*2,
-                'fileExt'=>['jpg','jpeg','png','gif'],
             ],
             'video' => [
                 'file',
                 'fileSize'=>1024*1024*20,
-                'fileExt'=>['mp4'],
             ],
         ],
         'store_dir' => 'storage',
