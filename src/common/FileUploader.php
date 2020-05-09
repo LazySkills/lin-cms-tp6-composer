@@ -96,7 +96,7 @@ class FileUploader
 
     protected function storeDb(string $path)
     {
-        $path = str_replace('\\', '/',strtolower($path));
+        $path = str_replace('\\', '/',$path);
         try{
             $linFile = LinFile::create([
                 'name' => basename($path),
@@ -113,7 +113,7 @@ class FileUploader
     }
 
     protected function getPublicData($id,$path){
-        $path = str_replace('\\', '/',strtolower($path));
+        $path = str_replace('\\', '/',$path);
         return [
             'id' => $id,
             'path' => $path,
