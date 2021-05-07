@@ -35,8 +35,7 @@ final class Logger extends Handler
 
     public function getParams($rule){
         $url =  str_replace('/','|',trim(request()->url(),'/'));
-        $options = $rule->mergeGroupOptions();
-
+        $options = method_exists($rule,'mergeGroupOptions') != false ? $rule->mergeGroupOptions() :  [];
         $getUrlParam = function ()use ($url,$options){
             if ($this instanceof RuleItem){
                 $options = $this->match($url, $options, false);
@@ -45,9 +44,8 @@ final class Logger extends Handler
             return [];
         };
 
-        $urlParams = $getUrlParam->call($rule);
+        $urlParams = $options == [] ? [] : $getUrlParam->call($rule);
         $methodParams = request()->{strtolower(request()->method())}();
-
         return empty($urlParams) ? $methodParams : (empty($methodParams) ? $urlParams : $urlParams + $methodParams);
     }
 }
